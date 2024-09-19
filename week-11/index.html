@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript OOP Lecture Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Object-Oriented Programming (OOP) Lecture Notes</h1>
+
+  <h2>1. Introduction to Object-Oriented Programming (OOP)</h2>
+  <p>
+    OOP is a programming paradigm based on the concept of "objects". Objects are instances of classes and are used to model real-world entities. The main concepts of OOP are:
+  </p>
+  <ul>
+    <li><strong>Class</strong>: A blueprint for creating objects.</li>
+    <li><strong>Object</strong>: An instance of a class.</li>
+    <li><strong>Constructor</strong>: A special method used for initializing objects.</li>
+    <li><strong>Encapsulation</strong>: The bundling of data (properties) and methods (functions) into a single unit (class/object).</li>
+    <li><strong>Inheritance</strong>: The mechanism by which one class can inherit properties and methods from another class.</li>
+    <li><strong>Polymorphism</strong>: The ability for different classes to be treated as instances of the same class through inheritance.</li>
+    <li><strong>Abstraction</strong>: Hiding the complex implementation details and exposing only the necessary parts of an object.</li>
+  </ul>
+
+  <h2>2. Creating Objects in JavaScript</h2>
+  <p>In JavaScript, you can create objects in multiple ways:</p>
+
+  <h3>Using Object Literals:</h3>
+  <pre><code>
+const car = {
+  make: 'Toyota',
+  model: 'Corolla',
+  start: function() {
+    console.log('Car started');
+  }
+};
+
+console.log(car.make); // Output: Toyota
+car.start();           // Output: Car started
+  </code></pre>
+
+  <h2>3. JavaScript Classes</h2>
+  <p>A class in JavaScript is a blueprint for creating objects. It defines properties and methods that objects created from the class will have.</p>
+
+  <h3>Example of a JavaScript Class:</h3>
+  <pre><code>
+class Car {
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+
+  start() {
+    console.log(`${this.make} ${this.model} started`);
+  }
+
+  displayInfo() {
+    console.log(`Car: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
+  }
+}
+
+// Create an instance of Car
+const myCar = new Car('Honda', 'Civic', 2020);
+myCar.start();         // Output: Honda Civic started
+myCar.displayInfo();   // Output: Car: Honda, Model: Civic, Year: 2020
+  </code></pre>
+
+  <h2>4. Encapsulation</h2>
+  <p>Encapsulation means keeping properties and methods private or protected, allowing access to them through public methods only.</p>
+
+  <h3>Private Variables Using # Symbol:</h3>
+  <pre><code>
+class BankAccount {
+  #balance = 0; // private variable
+
+  constructor(owner, balance) {
+    this.owner = owner;
+    this.#balance = balance;
+  }
+
+  deposit(amount) {
+    this.#balance += amount;
+    console.log(`Deposited: $${amount}`);
+  }
+
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+const myAccount = new BankAccount('John', 500);
+myAccount.deposit(100);        // Output: Deposited: $100
+console.log(myAccount.getBalance());  // Output: 600
+  </code></pre>
+
+  <h2>5. Inheritance</h2>
+  <p>Inheritance allows one class to extend another, inheriting its properties and methods.</p>
+
+  <h3>Example of Inheritance:</h3>
+  <pre><code>
+class Vehicle {
+  constructor(type, make, model) {
+    this.type = type;
+    this.make = make;
+    this.model = model;
+  }
+
+  start() {
+    console.log(`${this.type} ${this.make} ${this.model} started`);
+  }
+}
+
+class Car extends Vehicle {
+  constructor(make, model, year) {
+    super('Car', make, model); // Call the parent class constructor
+    this.year = year;
+  }
+
+  displayCarInfo() {
+    console.log(`Car Info: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
+  }
+}
+
+const myCar = new Car('Tesla', 'Model S', 2021);
+myCar.start();               // Output: Car Tesla Model S started
+myCar.displayCarInfo();       // Output: Car Info: Tesla, Model: Model S, Year: 2021
+  </code></pre>
+
+  <h2>6. Polymorphism</h2>
+  <p>Polymorphism allows methods to be overridden, providing different functionality in the child class while keeping the same method name.</p>
+
+  <h3>Method Overriding:</h3>
+  <pre><code>
+class Animal {
+  speak() {
+    console.log('Animal makes a sound');
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log('Dog barks');
+  }
+}
+
+const myDog = new Dog();
+myDog.speak(); // Output: Dog barks
+  </code></pre>
+
+  <h2>7. Abstraction</h2>
+  <p>
+    Abstraction means hiding the internal details of the object and showing only the functionality. In JavaScript, there are no strict abstract classes, but you can simulate abstraction using methods and encapsulation.
+  </p>
+
+  <h2>8. Conclusion</h2>
+  <p>
+    OOP in JavaScript allows you to create reusable, maintainable, and scalable code by utilizing the concepts of classes, objects, inheritance, and more. By modeling real-world entities with OOP, you can create complex applications with clean and understandable code.
+  </p>
+
+  <h2>Sample Code with Output</h2>
+  <p>Here’s a basic sample you can run in your browser to see OOP in action:</p>
+</body>
+</html>
