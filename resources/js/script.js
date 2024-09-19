@@ -13,7 +13,7 @@ const data = {
                     "Introduction to HTML and CSS","CSS Box Model and Ludo Layout",
                     "Form and Input types" , "Flex , Float and Margin",
                     "CSS Sudo classes and Page Responsivness","Introduction to Javascript",
-                    "Javacript variables","Operators and Conditions",
+                    "Javascript Variables","Operators and Conditions",
                     "Functions and Recape of previous lectures","Loop,Javascript Events and Bootstrap"
                     ]
 };
@@ -51,4 +51,18 @@ for(var i = 0 ; i< weekCount ; i++){
     ytBtn.appendChild(videoButton);
 
 }
+typeWriter();
+}
+let textMessageContainer = document.querySelector(".textMessageContainer");
+let h3 = document.createElement("h3");
+textMessageContainer.appendChild(h3);
+let textMessage = "Welcome to the Code With Infiniti DEV Live Section.";
+let writingSpeed = 100;
+var i = 0;
+function typeWriter(){
+   if(i<textMessage.length){
+       h3.innerHTML += textMessage.charAt(i);
+       i++;
+       setTimeout(typeWriter,writingSpeed);
+    }
 }
