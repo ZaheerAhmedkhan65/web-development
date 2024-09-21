@@ -7,7 +7,7 @@ const data = {
             ytLinks : ["https://youtu.be/YK1xR1TmnIY?si=n1hnTi_uMBPeGgFm","https://youtu.be/Uj36nI2J7Ac?si=Ddgqer9lSKBDhDG3",
                     "https://youtu.be/fi5E3RFRf_k?si=_HKGi-AP_oHsJMGL","https://youtu.be/HnaOek-PqSY?si=ReGlPy0Uj-vO4kye",
                     "https://youtu.be/tcMvxFGvcfs?si=bsy6_Ge8As1ZSjCr","week-8/index.html",
-                    "week-9/index.html","week-10/index.html"
+                    "week-9/index.html","week-10/index.html","week-11/index.html"
                    ],
             topic : [
                     "Introduction to HTML and CSS","CSS Box Model and Ludo Layout",
