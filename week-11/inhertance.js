@@ -33,10 +33,10 @@ class Teacher extends Person{
    }
 }
 
-
+p = new Person("Person",new Date("1999-03-03"));
 s = new Student("John", new Date("1990-01-01"));
 t = new Teacher("Smith", new Date("1988-01-01"));
 
-
+p.into();
 s.into();
 t.into();
