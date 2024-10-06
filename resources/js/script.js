@@ -1,5 +1,5 @@
 let classList = document.getElementById("classList");
-const weekCount = 10;
+const weekCount = 12;
 
 classList.classList.add("d-flex" ,"align-items-center", "flex-wrap" ,"gap-3" ,"my-5")
 
@@ -8,14 +8,16 @@ const data = {
                     "https://youtu.be/fi5E3RFRf_k?si=_HKGi-AP_oHsJMGL","https://youtu.be/HnaOek-PqSY?si=ReGlPy0Uj-vO4kye",
                     "https://youtu.be/tcMvxFGvcfs?si=bsy6_Ge8As1ZSjCr","week-8/index.html",
                     "https://youtu.be/tcMvxFGvcfs?si=AMeTopDCt2gqbuF0","week-10/index.html",
-                    "week-11/index.html"
+                    "https://youtu.be/6h9qbaZ4PFM?si=c8bP-o2QLpwySXVN","https://youtu.be/RCmftrnwtX8?si=49iSmxQOUjnVFh6Q",
+                    "https://youtu.be/lSdDolwwO10?si=nWust2Z-B3Mx-jru","https://youtu.be/WI_VK5T9tNQ?si=J22iATiMrIE_fIHJ"
                    ],
             topic : [
                     "Introduction to HTML and CSS","CSS Box Model and Ludo Layout",
                     "Form and Input types" , "Flex , Float and Margin",
                     "CSS Sudo classes and Page Responsivness","Introduction to Javascript",
-                    "Javascript Variables","Operators and Conditions",
-                    "Functions and Recape of previous lectures","Loop,Javascript Events and Bootstrap"
+                    "Javascript Primitive Data Types","Operators and Conditions",
+                    "Recursive Functions,anonymous functions,find factorial","Loop,Javascript Events and Bootstrap",
+                    "Learn Problem Solving in javascript","Learn Object Oriented Programming"
                     ]
 };
 
